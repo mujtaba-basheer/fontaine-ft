@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websession Tracking</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://ws.aimbase.com/Scripts/awa.js" id="AimbaseAnalytics"
+        data-clientid="fontaine"></script>
+    <script type="text/javascript">
+        Aimbase.Analytics.AddListener(
+            document.querySelector('a[href="https://fontaineheavyhaul.com/"]'),
+            "Heavy Haul Button",
+            "click",
+            { PageAction: "c3759876-5337-4888-a85d-7872e57c542e" },
+            "Heavy-Hauls Button Header Click",
+            "Clicks"
+        );
+
+        Aimbase.Analytics.AddListener(
+            document.querySelector('a[href="/compare-trailers"]'),
+            "Find Your Trailer Button",
+            "click",
+            { PageAction: "c6a2601a-aec1-483a-b341-ab6689162e52" },
+            "Trailers Button Header Click",
+            "Clicks"
+        );
+
+        Aimbase.Analytics.AddListener(
+            document.querySelector('a[href="https://fontaineheavyhaul.com/"]'),
+            "Heavy Haul",
+            "click",
+            { PageAction: "c3759876-5337-4888-a85d-7872e57c542e" },
+            "Heavy-Hauls Button Header Click",
+            "Clicks"
+        );
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("input").each(function () {
+                $(this).val("Test");
+            });
+            $("select").each(function () {
+                const selectEl = $(this);
+                $(this).find("option").each(function () {
+                    selectEl.val($(this).attr("value"));
+                })
+            });
+
+            $("#wf-form-Contact-Form").on("submit", async function (ev) {
+                ev.preventDefault();
+                ev.stopPropagation();
+
+                try {
+                    const formData = {
+                        Customs: [
+                            {
+                                FieldName: "Length/Width",
+                                FieldValue: $("#length-width").val(),
+                            },
+                            {
+                                FieldName: "SuspensionType",
+                                FieldValue: $("#suspension").val(),
+                            },
+                            {
+                                FieldName: "FrameRating",
+                                FieldValue: $("#frame").val(),
+                            },
+                            {
+                                FieldName: "Flooring",
+                                FieldValue: $("#flooring-2").val(),
+                            },
+                            {
+                                FieldName: "StationaryChainCargoTieDowns",
+                                FieldValue: $("#stationary-chain").val(),
+                            },
+                            {
+                                FieldName: "ABS",
+                                FieldValue: $("#abs").val(),
+                            },
+                            {
+                                FieldName: "SideRails",
+                                FieldValue: $("#side-rails").val(),
+                            },
+                            {
+                                FieldName: "AxieSpread",
+                                FieldValue: $("#axle-spread").val(),
+                            },
+                            {
+                                FieldName: "Breaks",
+                                FieldValue: $("#Brakes").val(),
+                            },
+                            {
+                                FieldName: "AirLineFilters",
+                                FieldValue: $("#Air-Line-Filters").val(),
+                            },
+                            {
+                                FieldName: "HubAndDrums",
+                                FieldValue: $("#Hub-and-Drums").val(),
+                            },
+                            {
+                                FieldName: "WheelEnds",
+                                FieldValue: $("#Wheel-Ends").val(),
+                            },
+                            {
+                                FieldName: "Wheels",
+                                FieldValue: $("#Wheels").val(),
+                            },
+                            {
+                                FieldName: "Tires",
+                                FieldValue: $("#Tires").val(),
+                            },
+                            {
+                                FieldName: "TireInflationSystem",
+                                FieldValue: $("#Tire-Inflation-System").val(),
+                            },
+                            {
+                                FieldName: "SuspensionDetail",
+                                FieldValue: $("#Suspension-Detail").val(),
+                            },
+                            {
+                                FieldName: "AutoGladHandDump",
+                                FieldValue: $("#Auto-Glad-Hand-Dump").val(),
+                            },
+                            {
+                                FieldName: "ElectricDumpValve",
+                                FieldValue: $("#Electric-Dump-Valve").val(),
+                            },
+                            {
+                                FieldName: "AirLift",
+                                FieldValue: $("#Air-Lift").val(),
+                            },
+                            {
+                                FieldName: "FrontCorners",
+                                FieldValue: $("#Front-Corners").val(),
+                            },
+                            {
+                                FieldName: "ElectricalSystem",
+                                FieldValue: $("#Electrical-System").val(),
+                            },
+                            {
+                                FieldName: "OtherElectricalSpecifications",
+                                FieldValue: $("#Other-Electrical-Specifications").val(),
+                            },
+                            {
+                                FieldName: "Paint",
+                                FieldValue: $("#Paint").val(),
+                            },
+                            {
+                                FieldName: "ConspicuityTape",
+                                FieldValue: $("#Conspicuity-Tape").val(),
+                            },
+                            {
+                                FieldName: "Bumper",
+                                FieldValue: $("#Bumper").val(),
+                            },
+                            {
+                                FieldName: "Mudflaps",
+                                FieldValue: $("#Mudflaps").val(),
+                            },
+                            {
+                                FieldName: "SpareTireCarrier",
+                                FieldValue: $("#Spare-Tire-Carrier").val(),
+                            },
+                            {
+                                FieldName: "WinchTrack",
+                                FieldValue: $("#Winch-Track").val(),
+                            },
+                            {
+                                FieldName: "SlidingWinches",
+                                FieldValue: $("#Sliding-Winches").val(),
+                            },
+                            {
+                                FieldName: "27WinchStraps",
+                                FieldValue: $("#27-Winch-Straps").val(),
+                            },
+                            {
+                                FieldName: "30WinchStraps",
+                                FieldValue: $("#30-Winch-Straps").val(),
+                            },
+                            {
+                                FieldName: "SlidingJ-HookForRingVsFlatHookOn4Strap",
+                                FieldValue: $("#Sliding-J-Hook-for-Ring-vs.-Flat-Hook-on-4-Strap").val(),
+                            },
+                            {
+                                FieldName: "DockBumpers",
+                                FieldValue: $("#Dock-Bumpers").val(),
+                            },
+                            {
+                                FieldName: "Hubodometer",
+                                FieldValue: $("#Hubodometer").val(),
+                            },
+                            {
+                                FieldName: "RegistrationHolder",
+                                FieldValue: $("#Registration-Holder").val(),
+                            },
+                            {
+                                FieldName: "ToolBox",
+                                FieldValue: $("#Tool-Box").val(),
+                            },
+                            {
+                                FieldName: "Message",
+                                FieldValue: $("#Message").val(),
+                            },
+                            {
+                                FieldName: "NumberOfTrailersOperated",
+                                FieldValue: $("#Own-operate-Trailers").val(),
+                            },
+                            {
+                                FieldName: "IsBrochureRequested",
+                                FieldValue: $("#Request a brochure?")[0].checked ? "Yes" : "No",
+                            },
+                            {
+                                FieldName: "ModesOfCommunication",
+                                FieldValue: "" + ($("#checkbox")[0].checked && "Email,") + ($("#checkbox-2")[0].checked && "Phone")
+                            },
+                        ],
+                        FirstName: $("#First-Name").val(),
+                        LastName: $("#Last-Name").val(),
+                        Email: $("#Email-3").val(),
+                        MobilePhone: $("#Phone").val(),
+                        City: $("#City").val(),
+                        State: $("#State").val(),
+                        CompanyName: $("#Company").val(),
+                        FirstName: $("#First-Name").val(),
+                    };
+
+                    const baseUrl = "http://localhost:5001";
+                    // const baseUrl = "https://fontaine-node.herokuapp.com";
+
+                    const res = await fetch(`${baseUrl}/api/compare-trailer`);
+                    const data = await res.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error(error);
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
